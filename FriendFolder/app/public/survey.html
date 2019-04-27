@@ -7,160 +7,157 @@
     <link rel="stylesheet" href="../css/style.css">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
-    
-    <!-- <script src="../../server.js"></script>
-    <script src="../routing/apiRoutes.js"></script>
-    <script src="../routing/htmlRoutes.js"></script> -->
-
     <script src="https://code.jquery.com/jquery.js"></script>
     <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js"></script>
     
     <title>Friend Finder: Survey</title>
 </head>
 <body>
-    <div class="container">
-      <div class="row">
-        <div class="col-12">
-          <div class="card">
-            <div class="card-header">
-              <h3><span class="fa fa-facebook"></span><strong>Friend Survey</strong></h3>
-            </div>
-            <div class="card-body">
-              <form method="POST" role="form">
+<div class="container">
+  <div class="row">
+    <div class="col-12">
+      <div class="card">
+        <div class="card-header">
+          <h3><span class="fa fa-facebook"></span><strong>  Friend Survey</strong></h3>
+        </div>
+        <div class="card-body">
+          <form method="POST" role="form">
+            <div class="form-group">
                 <div class="form-group">
-                    <div class="form-group">
-                        <label for="name">Name</label>
-                        <input type="text" class="form-control" id="name">
-                    </div>
-                    <div class="form-group">
-                        <label for="photo">Link to Photo</label>
-                        <input type="text" class="form-control" id="photo">
-                    </div>
-                    <hr>
-                    <div class="individual-question">
-                        <h3>Question 1</h3>
-                        <h5>I like pizza</h5>
-                        <select id="question1Ans">
-                            <option value="choice1">1 (Strongly Disagree)</option>
-                            <option value="choice2">2</option>
-                            <option value="choice3">3</option>
-                            <option value="choice4">4</option>
-                            <option value="choice5">5 (Strongly Agree)</option>
-                        </select>
-                    </div>
-                    <div class="individual-question">
-                        <h3>Question 2</h3>
-                        <h5>I like running</h5>
-                        <select id="question2Ans">
-                            <option value="choice1">1 (Strongly Disagree)</option>
-                            <option value="choice2">2</option>
-                            <option value="choice3">3</option>
-                            <option value="choice4">4</option>
-                            <option value="choice5">5 (Strongly Agree)</option>
-                        </select>
-                    </div>
-                    <div class="individual-question">
-                      <h3>Question 3</h3>
-                      <h5>I like dogs</h5>
-                      <select id="question3Ans">
-                          <option value="choice1">1 (Strongly Disagree)</option>
-                          <option value="choice2">2</option>
-                          <option value="choice3">3</option>
-                          <option value="choice4">4</option>
-                          <option value="choice5">5 (Strongly Agree)</option>
-                      </select>
-                    </div>
-                    
-                    <div class="individual-question">
-                      <h3>Question 4</h3>
-                      <h5>I like writing</h5>
-                      <select id="question4Ans">
-                          <option value="choice1">1 (Strongly Disagree)</option>
-                          <option value="choice2">2</option>
-                          <option value="choice3">3</option>
-                          <option value="choice4">4</option>
-                          <option value="choice5">5 (Strongly Agree)</option>
-                      </select>
-                    </div> 
+                    <label for="name">Name (Required)</label>
+                    <input type="text" class="form-control" id="name">
+                </div>
+                <div class="form-group">
+                    <label for="photo">Link to Photo (Required)</label>
+                    <input type="text" class="form-control" id="photo">
+                </div>
+                <hr>
 
-                    <div class="individual-question">
-                      <h3>Question 5</h3>
-                      <h5>I like reading</h5>
-                      <select id="question5Ans">
-                          <option value="choice1">1 (Strongly Disagree)</option>
-                          <option value="choice2">2</option>
-                          <option value="choice3">3</option>
-                          <option value="choice4">4</option>
-                          <option value="choice5">5 (Strongly Agree)</option>
-                      </select>
-                    </div> 
+<div class="individual-question">
+      <h3>Question 1</h3>
+      <h5>Your mind is always buzzing with unexplored ideas and plans.</h5>
+      <select id="question1Ans">
+          <option value="choice1">1 (Strongly Disagree)</option>
+          <option value="choice2">2</option>
+          <option value="choice3">3</option>
+          <option value="choice4">4</option>
+          <option value="choice5">5 (Strongly Agree)</option>
+      </select>
+  </div>
+  <div class="individual-question">
+      <h3>Question 2</h3>
+      <h5>Generally speaking, you rely more on your experience than your imagination.</h5>
+      <select id="question2Ans">
+          <option value="choice1">1 (Strongly Disagree)</option>
+          <option value="choice2">2</option>
+          <option value="choice3">3</option>
+          <option value="choice4">4</option>
+          <option value="choice5">5 (Strongly Agree)</option>
+      </select>
+  </div>
+  <div class="individual-question">
+    <h3>Question 3</h3>
+    <h5>You find is easy to stay relaxed and focused even when there is some pressure.</h5>
+    <select id="question3Ans">
+        <option value="choice1">1 (Strongly Disagree)</option>
+        <option value="choice2">2</option>
+        <option value="choice3">3</option>
+        <option value="choice4">4</option>
+        <option value="choice5">5 (Strongly Agree)</option>
+    </select>
+  </div>
+  
+  <div class="individual-question">
+    <h3>Question 4</h3>
+    <h5>You rarely do something just out of sheer curiosity.</h5>
+    <select id="question4Ans">
+        <option value="choice1">1 (Strongly Disagree)</option>
+        <option value="choice2">2</option>
+        <option value="choice3">3</option>
+        <option value="choice4">4</option>
+        <option value="choice5">5 (Strongly Agree)</option>
+    </select>
+  </div> 
 
-                    <div class="individual-question">
-                      <h3>Question 6</h3>
-                      <h5>I like the beach</h5>
-                      <select id="question6Ans">
-                          <option value="choice1">1 (Strongly Disagree)</option>
-                          <option value="choice2">2</option>
-                          <option value="choice3">3</option>
-                          <option value="choice4">4</option>
-                          <option value="choice5">5 (Strongly Agree)</option>
-                      </select>
-                    </div> 
+  <div class="individual-question">
+    <h3>Question 5</h3>
+    <h5>People can rarely upset you.</h5>
+    <select id="question5Ans">
+        <option value="choice1">1 (Strongly Disagree)</option>
+        <option value="choice2">2</option>
+        <option value="choice3">3</option>
+        <option value="choice4">4</option>
+        <option value="choice5">5 (Strongly Agree)</option>
+    </select>
+  </div> 
 
-                    <div class="individual-question">
-                      <h3>Question 7</h3>
-                      <h5>I like big cities</h5>
-                      <select id="question7Ans">
-                          <option value="choice1">1 (Strongly Disagree)</option>
-                          <option value="choice2">2</option>
-                          <option value="choice3">3</option>
-                          <option value="choice4">4</option>
-                          <option value="choice5">5 (Strongly Agree)</option>
-                      </select>
-                    </div> 
+  <div class="individual-question">
+    <h3>Question 6</h3>
+    <h5>It is often difficult for you to relate to other people's feelings.</h5>
+    <select id="question6Ans">
+        <option value="choice1">1 (Strongly Disagree)</option>
+        <option value="choice2">2</option>
+        <option value="choice3">3</option>
+        <option value="choice4">4</option>
+        <option value="choice5">5 (Strongly Agree)</option>
+    </select>
+  </div> 
 
-                    <div class="individual-question">
-                      <h3>Question 8</h3>
-                      <h5>I like history</h5>
-                      <select id="question8Ans">
-                          <option value="choice1">1 (Strongly Disagree)</option>
-                          <option value="choice2">2</option>
-                          <option value="choice3">3</option>
-                          <option value="choice4">4</option>
-                          <option value="choice5">5 (Strongly Agree)</option>
-                      </select>
-                    </div> 
+  <div class="individual-question">
+    <h3>Question 7</h3>
+    <h5>In a discussion, truth should be more important than people's sensitivities.</h5>
+    <select id="question7Ans">
+        <option value="choice1">1 (Strongly Disagree)</option>
+        <option value="choice2">2</option>
+        <option value="choice3">3</option>
+        <option value="choice4">4</option>
+        <option value="choice5">5 (Strongly Agree)</option>
+    </select>
+  </div> 
 
-                    <div class="individual-question">
-                      <h3>Question 9</h3>
-                      <h5>I like science</h5>
-                      <select id="question9Ans">
-                          <option value="choice1">1 (Strongly Disagree)</option>
-                          <option value="choice2">2</option>
-                          <option value="choice3">3</option>
-                          <option value="choice4">4</option>
-                          <option value="choice5">5 (Strongly Agree)</option>
-                      </select>
-                    </div> 
+  <div class="individual-question">
+    <h3>Question 8</h3>
+    <h5>You rarely get carried away by fantasies and ideas.</h5>
+    <select id="question8Ans">
+        <option value="choice1">1 (Strongly Disagree)</option>
+        <option value="choice2">2</option>
+        <option value="choice3">3</option>
+        <option value="choice4">4</option>
+        <option value="choice5">5 (Strongly Agree)</option>
+    </select>
+  </div> 
 
-                    <div class="individual-question">
-                      <h3>Question 10</h3>
-                      <h5>I like the outdoors</h5>
-                      <select id="question10Ans">
-                          <option value="choice1">1 (Strongly Disagree)</option>
-                          <option value="choice2">2</option>
-                          <option value="choice3">3</option>
-                          <option value="choice4">4</option>
-                          <option value="choice5">5 (Strongly Agree)</option>
-                      </select>
-                    </div> 
+  <div class="individual-question">
+    <h3>Question 9</h3>
+    <h5>You think that everyone'sviews should be respected regardless of whether
+      theyare supported by facts or not.</h5>
+    <select id="question9Ans">
+        <option value="choice1">1 (Strongly Disagree)</option>
+        <option value="choice2">2</option>
+        <option value="choice3">3</option>
+        <option value="choice4">4</option>
+        <option value="choice5">5 (Strongly Agree)</option>
+    </select>
+  </div> 
+
+  <div class="individual-question">
+    <h3><bold>Question 10</bold></h3>
+    <h5>You feel more energetic after spending time with a group of people.</h5>
+    <select id="question10Ans">
+        <option value="choice1">1 (Strongly Disagree)</option>
+        <option value="choice2">2</option>
+        <option value="choice3">3</option>
+        <option value="choice4">4</option>
+        <option value="choice5">5 (Strongly Agree)</option>
+    </select>
+  </div> 
 
 
                 </div>
               </form>
               <br>
               <div class="text-right">
-                <button type="button" class="btn btn-primary btn-md" id="submit-survey-btn"> Submit</button>
+                <button type="button" class="btn btn-danger btn-md" id="submit-survey-btn"> Submit</button>
               </div>
             </div>
           </div>
